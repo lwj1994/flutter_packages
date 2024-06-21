@@ -6,6 +6,7 @@ package io.flutter.plugins.webviewflutter;
 
 import android.content.Context;
 import android.net.Uri;
+import android.net.http.SslError;
 import android.os.Build;
 import android.os.Message;
 import android.view.View;
@@ -14,17 +15,21 @@ import android.webkit.GeolocationPermissions;
 import android.webkit.JsPromptResult;
 import android.webkit.JsResult;
 import android.webkit.PermissionRequest;
+import android.webkit.SslErrorHandler;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.VisibleForTesting;
-import io.flutter.plugins.webviewflutter.GeneratedAndroidWebView.WebChromeClientHostApi;
+
 import java.util.Objects;
+
+import io.flutter.plugins.webviewflutter.GeneratedAndroidWebView.WebChromeClientHostApi;
 
 /**
  * Host api implementation for {@link WebChromeClient}.
@@ -255,6 +260,12 @@ public class WebChromeClientHostApiImpl implements WebChromeClientHostApi {
                 view.loadUrl(request.getUrl().toString());
               }
               return true;
+            }
+
+            @Override
+            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+              // 方便测试
+              handler.proceed();
             }
 
             // Legacy codepath for < N.
