@@ -13,16 +13,19 @@ import android.view.ViewParent;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
 import androidx.annotation.ChecksSdkIntAtLeast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
+
+import java.util.Map;
+import java.util.Objects;
+
 import io.flutter.embedding.android.FlutterView;
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.platform.PlatformView;
 import io.flutter.plugins.webviewflutter.GeneratedAndroidWebView.WebViewHostApi;
-import java.util.Map;
-import java.util.Objects;
 
 /**
  * Host api implementation for {@link WebView}.
@@ -107,7 +110,7 @@ public class WebViewHostApiImpl implements WebViewHostApi {
         @NonNull InstanceManager instanceManager,
         @NonNull AndroidSdkChecker sdkChecker) {
       super(context);
-      currentWebViewClient = new WebViewClient();
+      currentWebViewClient = new FlutterWebViewClient();
       currentWebChromeClient = new WebChromeClientHostApiImpl.SecureWebChromeClient();
       api = new WebViewFlutterApiImpl(binaryMessenger, instanceManager);
       this.sdkChecker = sdkChecker;
