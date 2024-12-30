@@ -4,8 +4,9 @@
 
 package io.flutter.plugins.webviewflutter;
 
-import android.webkit.HttpAuthHandler;
 import androidx.annotation.NonNull;
+
+import com.tencent.smtt.export.external.interfaces.HttpAuthHandler;
 
 /**
  * Host api implementation for {@link HttpAuthHandler}.

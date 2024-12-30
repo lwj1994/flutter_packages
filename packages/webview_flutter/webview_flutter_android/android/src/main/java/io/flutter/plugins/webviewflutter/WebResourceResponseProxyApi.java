@@ -4,8 +4,9 @@
 
 package io.flutter.plugins.webviewflutter;
 
-import android.webkit.WebResourceResponse;
 import androidx.annotation.NonNull;
+
+import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
 
 public class WebResourceResponseProxyApi extends PigeonApiWebResourceResponse {
   public WebResourceResponseProxyApi(@NonNull ProxyApiRegistrar pigeonRegistrar) {

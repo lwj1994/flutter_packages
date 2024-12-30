@@ -4,8 +4,10 @@
 
 package io.flutter.plugins.webviewflutter;
 
-import android.webkit.PermissionRequest;
 import androidx.annotation.NonNull;
+
+import com.tencent.smtt.export.external.interfaces.PermissionRequest;
+
 import java.util.Arrays;
 import java.util.List;
 

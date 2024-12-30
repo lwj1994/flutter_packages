@@ -5,9 +5,12 @@
 package io.flutter.plugins.webviewflutter;
 
 import android.os.Build;
-import android.webkit.WebResourceRequest;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.tencent.smtt.export.external.interfaces.WebResourceRequest;
+
 import java.util.Collections;
 import java.util.Map;
 

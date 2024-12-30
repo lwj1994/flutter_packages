@@ -4,9 +4,11 @@
 
 package io.flutter.plugins.webviewflutter;
 
-import android.webkit.CookieManager;
-import android.webkit.WebView;
 import androidx.annotation.NonNull;
+
+import com.tencent.smtt.sdk.CookieManager;
+import com.tencent.smtt.sdk.WebView;
+
 import kotlin.Result;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;

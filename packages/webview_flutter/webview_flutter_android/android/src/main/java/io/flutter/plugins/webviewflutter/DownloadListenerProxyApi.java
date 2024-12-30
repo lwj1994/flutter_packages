@@ -4,8 +4,9 @@
 
 package io.flutter.plugins.webviewflutter;
 
-import android.webkit.DownloadListener;
 import androidx.annotation.NonNull;
+
+import com.tencent.smtt.sdk.DownloadListener;
 
 /**
  * Host api implementation for {@link DownloadListener}.
