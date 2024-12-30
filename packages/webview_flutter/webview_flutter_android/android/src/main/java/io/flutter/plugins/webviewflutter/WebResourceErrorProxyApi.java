@@ -5,9 +5,11 @@
 package io.flutter.plugins.webviewflutter;
 
 import android.os.Build;
-import android.webkit.WebResourceError;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+
+import com.tencent.smtt.export.external.interfaces.WebResourceError;
 
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class WebResourceErrorProxyApi extends PigeonApiWebResourceError {

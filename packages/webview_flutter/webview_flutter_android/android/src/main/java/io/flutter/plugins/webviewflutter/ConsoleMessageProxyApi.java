@@ -4,8 +4,9 @@
 
 package io.flutter.plugins.webviewflutter;
 
-import android.webkit.ConsoleMessage;
 import androidx.annotation.NonNull;
+
+import com.tencent.smtt.export.external.interfaces.ConsoleMessage;
 
 public class ConsoleMessageProxyApi extends PigeonApiConsoleMessage {
   public ConsoleMessageProxyApi(@NonNull ProxyApiRegistrar pigeonRegistrar) {

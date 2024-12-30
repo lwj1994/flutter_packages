@@ -4,8 +4,8 @@
 
 package io.flutter.plugins.webviewflutter;
 
-import android.webkit.WebStorage;
 import androidx.annotation.NonNull;
+import com.tencent.smtt.sdk.*;
 
 /**
  * Host api implementation for {@link WebStorage}.

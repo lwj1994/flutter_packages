@@ -7,16 +7,17 @@ package io.flutter.plugins.webviewflutter;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.view.KeyEvent;
-import android.webkit.HttpAuthHandler;
-import android.webkit.WebResourceError;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebResourceResponse;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.webkit.WebResourceErrorCompat;
-import androidx.webkit.WebViewClientCompat;
+
+import com.tencent.smtt.export.external.interfaces.HttpAuthHandler;
+import com.tencent.smtt.export.external.interfaces.WebResourceError;
+import com.tencent.smtt.export.external.interfaces.WebResourceRequest;
+import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
+import com.tencent.smtt.sdk.WebView;
+import com.tencent.smtt.sdk.WebViewClient;
 
 /**
  * Host api implementation for {@link WebViewClient}.
@@ -142,7 +143,7 @@ public class WebViewClientProxyApi extends PigeonApiWebViewClient {
    * Implementation of {@link WebViewClientCompat} that passes arguments of callback methods to
    * Dart.
    */
-  public static class WebViewClientCompatImpl extends WebViewClientCompat {
+  public static class WebViewClientCompatImpl extends WebViewClient {
     private final WebViewClientProxyApi api;
     private boolean returnValueForShouldOverrideUrlLoading = false;
 
@@ -170,16 +171,6 @@ public class WebViewClientProxyApi extends PigeonApiWebViewClient {
       api.getPigeonRegistrar()
           .runOnMainThread(
               () -> api.onReceivedHttpError(this, view, request, response, reply -> null));
-    }
-
-    @Override
-    public void onReceivedError(
-        @NonNull WebView view,
-        @NonNull WebResourceRequest request,
-        @NonNull WebResourceErrorCompat error) {
-      api.getPigeonRegistrar()
-          .runOnMainThread(
-              () -> api.onReceivedRequestErrorCompat(this, view, request, error, reply -> null));
     }
 
     // Legacy codepath for versions that don't support the variant above.

@@ -4,7 +4,8 @@
 
 package io.flutter.plugins.webviewflutter;
 
-import android.webkit.WebSettings;
+import com.tencent.smtt.sdk.*;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
