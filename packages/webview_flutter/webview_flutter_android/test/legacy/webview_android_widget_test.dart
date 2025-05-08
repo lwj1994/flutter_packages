@@ -8,11 +8,11 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:webview_flutter_android/src/android_webkit.g.dart'
+import 'package:webview_flutter_android_tbs/src/android_webkit.g.dart'
     as android_webview;
-import 'package:webview_flutter_android/src/android_webkit_constants.dart';
-import 'package:webview_flutter_android/src/legacy/webview_android_widget.dart';
-import 'package:webview_flutter_platform_interface/src/webview_flutter_platform_interface_legacy.dart';
+import 'package:webview_flutter_android_tbs/src/android_webkit_constants.dart';
+import 'package:webview_flutter_android_tbs/src/legacy/webview_android_widget.dart';
+import 'package:webview_flutter_platform_interface_tbs/src/webview_flutter_platform_interface_legacy.dart';
 
 import 'webview_android_widget_test.mocks.dart';
 

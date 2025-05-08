@@ -10,15 +10,15 @@ import 'package:flutter/gestures.dart' as _i8;
 import 'package:flutter/widgets.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i11;
-import 'package:webview_flutter_platform_interface/src/legacy/platform_interface/javascript_channel_registry.dart'
+import 'package:webview_flutter_platform_interface_tbs/src/legacy/platform_interface/javascript_channel_registry.dart'
     as _i7;
-import 'package:webview_flutter_platform_interface/src/legacy/platform_interface/webview_platform.dart'
+import 'package:webview_flutter_platform_interface_tbs/src/legacy/platform_interface/webview_platform.dart'
     as _i4;
-import 'package:webview_flutter_platform_interface/src/legacy/platform_interface/webview_platform_callbacks_handler.dart'
+import 'package:webview_flutter_platform_interface_tbs/src/legacy/platform_interface/webview_platform_callbacks_handler.dart'
     as _i6;
-import 'package:webview_flutter_platform_interface/src/legacy/platform_interface/webview_platform_controller.dart'
+import 'package:webview_flutter_platform_interface_tbs/src/legacy/platform_interface/webview_platform_controller.dart'
     as _i10;
-import 'package:webview_flutter_platform_interface/src/legacy/types/types.dart'
+import 'package:webview_flutter_platform_interface_tbs/src/legacy/types/types.dart'
     as _i5;
 
 // ignore_for_file: type=lint

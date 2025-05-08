@@ -5,7 +5,7 @@
 // ignore_for_file: unnecessary_statements
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart'
+import 'package:webview_flutter_platform_interface_tbs/webview_flutter_platform_interface.dart'
     as main_file;
 
 void main() {

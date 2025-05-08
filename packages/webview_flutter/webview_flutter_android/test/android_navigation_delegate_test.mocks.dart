@@ -6,7 +6,7 @@
 import 'dart:async' as _i3;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:webview_flutter_android/src/android_webkit.g.dart' as _i2;
+import 'package:webview_flutter_android_tbs/src/android_webkit.g.dart' as _i2;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

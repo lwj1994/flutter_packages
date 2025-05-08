@@ -7,10 +7,10 @@ import 'dart:async' as _i5;
 import 'dart:ui' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:webview_flutter_android/src/android_webkit.g.dart' as _i2;
-import 'package:webview_flutter_android/src/android_webview_controller.dart'
+import 'package:webview_flutter_android_tbs/src/android_webkit.g.dart' as _i2;
+import 'package:webview_flutter_android_tbs/src/android_webview_controller.dart'
     as _i6;
-import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart'
+import 'package:webview_flutter_platform_interface_tbs/webview_flutter_platform_interface.dart'
     as _i3;
 
 // ignore_for_file: type=lint

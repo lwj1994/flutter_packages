@@ -8,10 +8,10 @@ import 'dart:typed_data' as _i6;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i5;
-import 'package:webview_flutter_android/src/android_webkit.g.dart' as _i2;
-import 'package:webview_flutter_android/src/legacy/webview_android_widget.dart'
+import 'package:webview_flutter_android_tbs/src/android_webkit.g.dart' as _i2;
+import 'package:webview_flutter_android_tbs/src/legacy/webview_android_widget.dart'
     as _i7;
-import 'package:webview_flutter_platform_interface/src/webview_flutter_platform_interface_legacy.dart'
+import 'package:webview_flutter_platform_interface_tbs/src/webview_flutter_platform_interface_legacy.dart'
     as _i3;
 
 // ignore_for_file: type=lint

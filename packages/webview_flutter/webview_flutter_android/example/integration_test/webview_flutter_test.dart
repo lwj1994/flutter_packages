@@ -14,12 +14,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:webview_flutter_android/src/android_proxy.dart';
-import 'package:webview_flutter_android/src/android_webkit.g.dart'
+import 'package:webview_flutter_android_tbs/src/android_proxy.dart';
+import 'package:webview_flutter_android_tbs/src/android_webkit.g.dart'
     as android_webkit;
-import 'package:webview_flutter_android/src/weak_reference_utils.dart';
-import 'package:webview_flutter_android/webview_flutter_android.dart';
-import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
+import 'package:webview_flutter_android_tbs/src/weak_reference_utils.dart';
+import 'package:webview_flutter_android_tbs/webview_flutter_android_tbs.dart';
+import 'package:webview_flutter_platform_interface_tbs/webview_flutter_platform_interface.dart';
 
 // `IntegrationTestWidgetsFlutterBinding.watchPerformance` is throwing an
 // exception when called. See https://github.com/flutter/flutter/issues/159500

@@ -5,7 +5,7 @@
 // ignore_for_file: public_member_api_docs
 
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:webview_flutter_tbs/webview_flutter.dart';
 
 void main() => runApp(const MaterialApp(home: WebViewExample()));
 

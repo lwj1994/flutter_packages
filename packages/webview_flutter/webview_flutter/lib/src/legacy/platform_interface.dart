@@ -7,7 +7,7 @@
 /// non-endorsed existing implementations of the interface.
 library;
 
-export 'package:webview_flutter_platform_interface/src/webview_flutter_platform_interface_legacy.dart'
+export 'package:webview_flutter_platform_interface_tbs/src/webview_flutter_platform_interface_legacy.dart'
     show
         AutoMediaPlaybackPolicy,
         CreationParams,

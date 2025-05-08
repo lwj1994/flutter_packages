@@ -8,7 +8,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 // ignore: implementation_imports
-import 'package:webview_flutter_platform_interface/src/webview_flutter_platform_interface_legacy.dart';
+import 'package:webview_flutter_platform_interface_tbs/src/webview_flutter_platform_interface_legacy.dart';
 
 import '../android_webkit.g.dart';
 import 'webview_android.dart';
@@ -48,7 +48,7 @@ class SurfaceAndroidWebView extends AndroidWebView {
       javascriptChannelRegistry: javascriptChannelRegistry,
       onBuildWidget: (WebViewAndroidPlatformController controller) {
         return PlatformViewLink(
-          viewType: 'plugins.flutter.io/webview',
+          viewType: 'plugins.flutter.io/webview_tbs',
           surfaceFactory: (
             BuildContext context,
             PlatformViewController controller,
@@ -70,7 +70,7 @@ class SurfaceAndroidWebView extends AndroidWebView {
               hybridComposition:
                   backgroundColor != null && backgroundColor.opacity < 1.0,
               id: params.id,
-              viewType: 'plugins.flutter.io/webview',
+              viewType: 'plugins.flutter.io/webview_tbs',
               // WebView content is not affected by the Android view's layout direction,
               // we explicitly set it here so that the widget doesn't require an ambient
               // directionality.

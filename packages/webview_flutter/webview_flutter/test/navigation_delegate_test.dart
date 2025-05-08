@@ -6,8 +6,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'package:webview_flutter/webview_flutter.dart';
-import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
+import 'package:webview_flutter_tbs/webview_flutter.dart';
+import 'package:webview_flutter_platform_interface_tbs/webview_flutter_platform_interface.dart';
 
 import 'navigation_delegate_test.mocks.dart';
 

@@ -7,13 +7,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:webview_flutter_android/src/android_proxy.dart';
-import 'package:webview_flutter_android/src/android_webkit.g.dart'
+import 'package:webview_flutter_android_tbs/src/android_proxy.dart';
+import 'package:webview_flutter_android_tbs/src/android_webkit.g.dart'
     as android_webview;
-import 'package:webview_flutter_android/src/android_webkit_constants.dart';
-import 'package:webview_flutter_android/src/platform_views_service_proxy.dart';
-import 'package:webview_flutter_android/webview_flutter_android.dart';
-import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
+import 'package:webview_flutter_android_tbs/src/android_webkit_constants.dart';
+import 'package:webview_flutter_android_tbs/src/platform_views_service_proxy.dart';
+import 'package:webview_flutter_android_tbs/webview_flutter_android_tbs.dart';
+import 'package:webview_flutter_platform_interface_tbs/webview_flutter_platform_interface.dart';
 
 import 'android_navigation_delegate_test.dart';
 import 'android_webview_controller_test.mocks.dart';

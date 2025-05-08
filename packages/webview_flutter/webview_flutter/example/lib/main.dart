@@ -11,12 +11,11 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:webview_flutter_android_tbs/webview_flutter_android_tbs.dart';
+import 'package:webview_flutter_tbs/webview_flutter.dart';
+
 // #docregion platform_imports
 // Import for Android features.
-import 'package:webview_flutter_android/webview_flutter_android.dart';
-// Import for iOS/macOS features.
-import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 // #enddocregion platform_imports
 
 void main() => runApp(const MaterialApp(home: WebViewExample()));
@@ -126,14 +125,7 @@ class _WebViewExampleState extends State<WebViewExample> {
 
     // #docregion platform_features
     late final PlatformWebViewControllerCreationParams params;
-    if (WebViewPlatform.instance is WebKitWebViewPlatform) {
-      params = WebKitWebViewControllerCreationParams(
-        allowsInlineMediaPlayback: true,
-        mediaTypesRequiringUserAction: const <PlaybackMediaTypes>{},
-      );
-    } else {
-      params = const PlatformWebViewControllerCreationParams();
-    }
+    params = const PlatformWebViewControllerCreationParams();
 
     final WebViewController controller =
         WebViewController.fromPlatformCreationParams(params);

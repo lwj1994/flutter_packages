@@ -9,11 +9,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/widgets.dart';
 // ignore: implementation_imports
-import 'package:webview_flutter_android/src/webview_flutter_android_legacy.dart';
+import 'package:webview_flutter_android_tbs/src/webview_flutter_android_legacy.dart';
 // ignore: implementation_imports
-import 'package:webview_flutter_platform_interface/src/webview_flutter_platform_interface_legacy.dart';
+import 'package:webview_flutter_platform_interface_tbs/src/webview_flutter_platform_interface_legacy.dart';
 // ignore: implementation_imports
-import 'package:webview_flutter_wkwebview/src/webview_flutter_wkwebview_legacy.dart';
 
 /// Optional callback invoked when a web view is first created. [controller] is
 /// the [WebViewController] for the created web view.
@@ -122,7 +121,6 @@ class WebView extends StatefulWidget {
         case TargetPlatform.android:
           _platform = SurfaceAndroidWebView();
         case TargetPlatform.iOS:
-          _platform = CupertinoWebView();
         // ignore: no_default_cases
         default:
           throw UnsupportedError(
@@ -793,7 +791,6 @@ class CookieManager {
       if (Platform.isAndroid) {
         WebViewCookieManagerPlatform.instance = WebViewAndroidCookieManager();
       } else if (Platform.isIOS) {
-        WebViewCookieManagerPlatform.instance = WKWebViewCookieManager();
       } else {
         throw AssertionError(
             'This platform is currently unsupported by webview_flutter.');

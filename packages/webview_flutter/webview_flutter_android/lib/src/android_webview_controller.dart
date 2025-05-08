@@ -9,7 +9,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
-import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
+import 'package:webview_flutter_platform_interface_tbs/webview_flutter_platform_interface.dart';
 
 import 'android_proxy.dart';
 import 'android_webkit.g.dart' as android_webview;
@@ -1018,7 +1018,7 @@ class AndroidWebViewWidget extends PlatformWebViewWidget {
       key: _androidParams.key ??
           ValueKey<AndroidWebViewWidgetCreationParams>(
               params as AndroidWebViewWidgetCreationParams),
-      viewType: 'plugins.flutter.io/webview',
+      viewType: 'plugins.flutter.io/webview_tbs',
       surfaceFactory: (
         BuildContext context,
         PlatformViewController controller,
@@ -1123,7 +1123,7 @@ class AndroidCustomViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return PlatformViewLink(
       key: key,
-      viewType: 'plugins.flutter.io/webview',
+      viewType: 'plugins.flutter.io/webview_tbs',
       surfaceFactory: (
         BuildContext context,
         PlatformViewController controller,
@@ -1162,7 +1162,7 @@ AndroidViewController _initAndroidView(
   if (displayWithHybridComposition) {
     return platformViewsServiceProxy.initExpensiveAndroidView(
       id: params.id,
-      viewType: 'plugins.flutter.io/webview',
+      viewType: 'plugins.flutter.io/webview_tbs',
       layoutDirection: layoutDirection,
       creationParams: identifier,
       creationParamsCodec: const StandardMessageCodec(),
@@ -1170,7 +1170,7 @@ AndroidViewController _initAndroidView(
   } else {
     return platformViewsServiceProxy.initSurfaceAndroidView(
       id: params.id,
-      viewType: 'plugins.flutter.io/webview',
+      viewType: 'plugins.flutter.io/webview_tbs',
       layoutDirection: layoutDirection,
       creationParams: identifier,
       creationParamsCodec: const StandardMessageCodec(),

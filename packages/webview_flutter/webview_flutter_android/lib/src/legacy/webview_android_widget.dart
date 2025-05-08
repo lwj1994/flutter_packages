@@ -7,7 +7,7 @@ import 'dart:typed_data';
 
 import 'package:flutter/widgets.dart';
 // ignore: implementation_imports
-import 'package:webview_flutter_platform_interface/src/webview_flutter_platform_interface_legacy.dart';
+import 'package:webview_flutter_platform_interface_tbs/src/webview_flutter_platform_interface_legacy.dart';
 
 import '../android_webkit.g.dart' as android_webview;
 import '../android_webkit_constants.dart';

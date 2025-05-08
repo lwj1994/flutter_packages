@@ -5,7 +5,7 @@
 // ignore_for_file: unnecessary_statements
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:webview_flutter/webview_flutter.dart' as main_file;
+import 'package:webview_flutter_tbs/webview_flutter.dart' as main_file;
 
 void main() {
   group('webview_flutter', () {

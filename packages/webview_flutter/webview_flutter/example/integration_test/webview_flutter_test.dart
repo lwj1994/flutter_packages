@@ -15,9 +15,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:webview_flutter/webview_flutter.dart';
-import 'package:webview_flutter_android/webview_flutter_android.dart';
-import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
+import 'package:webview_flutter_android_tbs/webview_flutter_android_tbs.dart';
+import 'package:webview_flutter_tbs/webview_flutter.dart';
 
 Future<void> main() async {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
@@ -248,9 +247,6 @@ Future<void> main() async {
 
       late PlatformWebViewControllerCreationParams params;
       if (defaultTargetPlatform == TargetPlatform.iOS) {
-        params = WebKitWebViewControllerCreationParams(
-          mediaTypesRequiringUserAction: const <PlaybackMediaTypes>{},
-        );
       } else {
         params = const PlatformWebViewControllerCreationParams();
       }
@@ -311,10 +307,6 @@ Future<void> main() async {
 
       late PlatformWebViewControllerCreationParams params;
       if (defaultTargetPlatform == TargetPlatform.iOS) {
-        params = WebKitWebViewControllerCreationParams(
-          mediaTypesRequiringUserAction: const <PlaybackMediaTypes>{},
-          allowsInlineMediaPlayback: true,
-        );
       } else {
         params = const PlatformWebViewControllerCreationParams();
       }
@@ -398,9 +390,6 @@ Future<void> main() async {
 
       late PlatformWebViewControllerCreationParams params;
       if (defaultTargetPlatform == TargetPlatform.iOS) {
-        params = WebKitWebViewControllerCreationParams(
-          mediaTypesRequiringUserAction: const <PlaybackMediaTypes>{},
-        );
       } else {
         params = const PlatformWebViewControllerCreationParams();
       }

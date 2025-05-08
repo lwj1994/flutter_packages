@@ -6,9 +6,9 @@
 import 'dart:async' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:webview_flutter_platform_interface/src/platform_navigation_delegate.dart'
+import 'package:webview_flutter_platform_interface_tbs/src/platform_navigation_delegate.dart'
     as _i3;
-import 'package:webview_flutter_platform_interface/src/types/types.dart' as _i2;
+import 'package:webview_flutter_platform_interface_tbs/src/types/types.dart' as _i2;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

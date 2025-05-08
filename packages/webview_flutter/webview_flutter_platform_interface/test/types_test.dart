@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:webview_flutter_platform_interface/src/types/types.dart';
+import 'package:webview_flutter_platform_interface_tbs/src/types/types.dart';
 
 void main() {
   group('types', () {
