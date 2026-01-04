@@ -52,31 +52,33 @@ class X5Api(private val context: Context) : AndroidX5WebViewApi {
         map[TbsCoreSettings.TBS_SETTINGS_USE_PRIVATE_CLASSLOADER] = true
         map[TbsCoreSettings.TBS_SETTINGS_USE_DEXLOADER_SERVICE] = true
         QbSdk.initTbsSettings(map)
-        QbSdk.setTbsListener(object :TbsListener{
+        QbSdk.setTbsListener(object : TbsListener {
             override fun onDownloadFinish(p0: Int) {
-                
+
             }
 
             override fun onInstallFinish(p0: Int) {
-                
+
             }
 
             override fun onDownloadProgress(p0: Int) {
-                
+
             }
 
         })
         QbSdk.preInit(context, object : QbSdk.PreInitCallback {
             override fun onCoreInitFinished() {
-                
+
             }
 
             override fun onViewInitFinished(isX5: Boolean) {
                 Log.d(TAG, "onViewInitFinished: isX5=$isX5")
-                callback(Result.success(isX5))
+
             }
 
         })
+
+        callback(Result.success(QbSdk.canLoadX5(context)))
         QbSdk.setDownloadWithoutWifi(true)
     }
 
@@ -90,9 +92,9 @@ class X5Api(private val context: Context) : AndroidX5WebViewApi {
         Log.d(TAG, "install: filePath=$filePath, version=$version")
         if (filePath.isNotEmpty()) {
             QbSdk.installLocalTbsCore(context, version.toInt(), filePath)
-            
+
         }
     }
 
-   
+
 }
