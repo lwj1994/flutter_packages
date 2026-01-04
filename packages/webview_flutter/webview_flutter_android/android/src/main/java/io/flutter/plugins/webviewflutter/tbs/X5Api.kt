@@ -67,9 +67,9 @@ class X5Api(private val context: Context) : AndroidX5WebViewApi {
 
             })
             QbSdk.setDownloadWithoutWifi(true)
-            callback.invoke(true);
+            callback.invoke(Result.success(true));
         } else {
-            callback.invoke(false);
+            callback.invoke(Result.success(false));
         }
     }
 
