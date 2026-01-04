@@ -76,6 +76,7 @@ class X5Api(private val context: Context) : AndroidX5WebViewApi {
      * @param version Version of the X5 kernel
      */
     override fun install(filePath: String, version: String) {
+        QbSdk.reset(context)
         Log.d(TAG, "install: filePath=$filePath, version=$version")
         if (filePath.isNotEmpty()) {
             QbSdk.installLocalTbsCore(context, version.toInt(), filePath)
