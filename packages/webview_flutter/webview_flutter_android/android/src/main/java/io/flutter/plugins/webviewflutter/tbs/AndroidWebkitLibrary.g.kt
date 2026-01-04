@@ -4165,34 +4165,55 @@ abstract class PigeonApiHttpAuthHandler(open val pigeonRegistrar: AndroidWebkitL
 }
 /** Generated interface from Pigeon that represents a handler of messages from Flutter. */
 interface AndroidX5WebViewApi {
-  fun initX5Environment(callback: (Result<Unit>) -> Unit)
+    fun initX5Environment(callback: (Result<Boolean>) -> Unit)
+    fun install(filePath: String, version: String)
 
-  companion object {
-    /** The codec used by AndroidX5WebViewApi. */
-    val codec: MessageCodec<Any?> by lazy {
-      AndroidWebkitLibraryPigeonCodec()
-    }
-    /** Sets up an instance of `AndroidX5WebViewApi` to handle messages through the `binaryMessenger`. */
-    @JvmOverloads
-    fun setUp(binaryMessenger: BinaryMessenger, api: AndroidX5WebViewApi?, messageChannelSuffix: String = "") {
-      val separatedMessageChannelSuffix = if (messageChannelSuffix.isNotEmpty()) ".$messageChannelSuffix" else ""
-      run {
-        val channel = BasicMessageChannel<Any?>(binaryMessenger, "dev.flutter.pigeon.webview_flutter_android_tbs.AndroidX5WebViewApi.initX5Environment$separatedMessageChannelSuffix", codec)
-        if (api != null) {
-          channel.setMessageHandler { _, reply ->
-            api.initX5Environment{ result: Result<Unit> ->
-              val error = result.exceptionOrNull()
-              if (error != null) {
-                reply.reply(io.flutter.plugins.webviewflutter.tbs.wrapError(error))
-              } else {
-                reply.reply(io.flutter.plugins.webviewflutter.tbs.wrapResult(null))
-              }
-            }
-          }
-        } else {
-          channel.setMessageHandler(null)
+    companion object {
+        /** The codec used by AndroidX5WebViewApi. */
+        val codec: MessageCodec<Any?> by lazy {
+            AndroidWebkitLibraryPigeonCodec()
         }
-      }
+        /** Sets up an instance of `AndroidX5WebViewApi` to handle messages through the `binaryMessenger`. */
+        @JvmOverloads
+        fun setUp(binaryMessenger: BinaryMessenger, api: AndroidX5WebViewApi?, messageChannelSuffix: String = "") {
+            val separatedMessageChannelSuffix = if (messageChannelSuffix.isNotEmpty()) ".$messageChannelSuffix" else ""
+            run {
+                val channel = BasicMessageChannel<Any?>(binaryMessenger, "dev.flutter.pigeon.webview_flutter_android_tbs.AndroidX5WebViewApi.initX5Environment$separatedMessageChannelSuffix", codec)
+                if (api != null) {
+                    channel.setMessageHandler { _, reply ->
+                        api.initX5Environment{ result: Result<Boolean> ->
+                            val error = result.exceptionOrNull()
+                            if (error != null) {
+                                reply.reply(wrapError(error))
+                            } else {
+                                val data = result.getOrNull()
+                                reply.reply(wrapResult(data))
+                            }
+                        }
+                    }
+                } else {
+                    channel.setMessageHandler(null)
+                }
+            }
+            run {
+                val channel = BasicMessageChannel<Any?>(binaryMessenger, "dev.flutter.pigeon.webview_flutter_android_tbs.AndroidX5WebViewApi.install$separatedMessageChannelSuffix", codec)
+                if (api != null) {
+                    channel.setMessageHandler { message, reply ->
+                        val args = message as List<Any?>
+                        val filePathArg = args[0] as String
+                        val versionArg = args[1] as String
+                        val wrapped: List<Any?> = try {
+                            api.install(filePathArg, versionArg)
+                            listOf(null)
+                        } catch (exception: Throwable) {
+                            wrapError(exception)
+                        }
+                        reply.reply(wrapped)
+                    }
+                } else {
+                    channel.setMessageHandler(null)
+                }
+            }
+        }
     }
-  }
 }

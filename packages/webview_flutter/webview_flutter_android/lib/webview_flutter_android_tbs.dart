@@ -9,6 +9,14 @@ export 'src/android_webview_cookie_manager.dart';
 export 'src/android_webview_platform.dart';
 
 /// Initialize the X5 WebView environment.
-Future<void> initX5Environment() async {
-  return AndroidX5WebViewApi().initX5Environment();
+Future<bool> initX5Environment() async {
+  return await AndroidX5WebViewApi().initX5Environment();
+}
+
+/// Install the X5 WebView environment.
+Future<void> installX5Environment(
+    {required String filePath, required String version}) async {
+  await AndroidX5WebViewApi().install(filePath, version);
+  await Future.delayed(const Duration(seconds: 3));
+  await initX5Environment();
 }

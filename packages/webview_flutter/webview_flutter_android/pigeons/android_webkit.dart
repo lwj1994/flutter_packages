@@ -8,9 +8,10 @@ import 'package:pigeon/pigeon.dart';
   PigeonOptions(
     copyrightHeader: 'pigeons/copyright.txt',
     dartOut: 'lib/src/android_webkit.g.dart',
-    kotlinOut: 'android/src/main/java/io/flutter/plugins/webviewflutter/tbs/AndroidWebkitLibrary.g.kt',
+    kotlinOut:
+        'android/src/main/java/io/flutter/plugins/webviewflutter/tbs/AndroidWebkitLibrary.g.kt',
     kotlinOptions: KotlinOptions(
-      package: 'io.flutter.plugins.webviewflutter',
+      package: 'io.flutter.plugins.webviewflutter.tbs',
       errorClassName: 'AndroidWebKitError',
     ),
   ),
@@ -84,7 +85,8 @@ enum ConsoleMessageLevel {
 /// See https://developer.android.com/reference/android/webkit/WebResourceRequest.
 @ProxyApi(
   kotlinOptions: KotlinProxyApiOptions(
-    fullClassName: 'com.tencent.smtt.export.external.interfaces.WebResourceRequest',
+    fullClassName:
+        'com.tencent.smtt.export.external.interfaces.WebResourceRequest',
   ),
 )
 abstract class WebResourceRequest {
@@ -112,7 +114,8 @@ abstract class WebResourceRequest {
 /// See https://developer.android.com/reference/android/webkit/WebResourceResponse.
 @ProxyApi(
   kotlinOptions: KotlinProxyApiOptions(
-    fullClassName: 'com.tencent.smtt.export.external.interfaces.WebResourceResponse',
+    fullClassName:
+        'com.tencent.smtt.export.external.interfaces.WebResourceResponse',
   ),
 )
 abstract class WebResourceResponse {
@@ -126,7 +129,8 @@ abstract class WebResourceResponse {
 /// See https://developer.android.com/reference/android/webkit/WebResourceError.
 @ProxyApi(
   kotlinOptions: KotlinProxyApiOptions(
-    fullClassName: 'com.tencent.smtt.export.external.interfaces.WebResourceError',
+    fullClassName:
+        'com.tencent.smtt.export.external.interfaces.WebResourceError',
     minAndroidApi: 23,
   ),
 )
@@ -491,7 +495,8 @@ abstract class DownloadListener {
 /// See https://developer.android.com/reference/android/webkit/WebChromeClient.
 @ProxyApi(
   kotlinOptions: KotlinProxyApiOptions(
-    fullClassName: 'io.flutter.plugins.webviewflutter.WebChromeClientProxyApi.WebChromeClientImpl',
+    fullClassName:
+        'io.flutter.plugins.webviewflutter.WebChromeClientProxyApi.WebChromeClientImpl',
   ),
 )
 abstract class WebChromeClient {
@@ -709,7 +714,8 @@ abstract class FileChooserParams {
 /// See https://developer.android.com/reference/android/webkit/PermissionRequest.
 @ProxyApi(
   kotlinOptions: KotlinProxyApiOptions(
-    fullClassName: 'com.tencent.smtt.export.external.interfaces.PermissionRequest',
+    fullClassName:
+        'com.tencent.smtt.export.external.interfaces.PermissionRequest',
   ),
 )
 abstract class PermissionRequest {
@@ -776,7 +782,8 @@ abstract class GeolocationPermissionsCallback {
 /// See https://developer.android.com/reference/android/webkit/HttpAuthHandler.
 @ProxyApi(
   kotlinOptions: KotlinProxyApiOptions(
-    fullClassName: 'com.tencent.smtt.export.external.interfaces.HttpAuthHandler',
+    fullClassName:
+        'com.tencent.smtt.export.external.interfaces.HttpAuthHandler',
   ),
 )
 abstract class HttpAuthHandler {
@@ -796,7 +803,7 @@ abstract class HttpAuthHandler {
 @HostApi()
 abstract class AndroidX5WebViewApi {
   @async
-  void initX5Environment();
+  bool initX5Environment();
 
-
+  void install(String filePath,String version);
 }
