@@ -14,9 +14,9 @@ Future<bool> initX5Environment() async {
 }
 
 /// Install the X5 WebView environment.
-Future<void> installX5Environment(
+Future<bool> installX5Environment(
     {required String filePath, required String version}) async {
   await AndroidX5WebViewApi().install(filePath, version);
   await Future.delayed(const Duration(seconds: 3));
-  await initX5Environment();
+  return await initX5Environment();
 }
