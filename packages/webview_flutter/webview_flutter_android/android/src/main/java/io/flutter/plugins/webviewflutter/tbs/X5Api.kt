@@ -71,8 +71,9 @@ class X5Api(private val context: Context) : AndroidX5WebViewApi {
                 
             }
 
-            override fun onViewInitFinished(p0: Boolean) {
-                
+            override fun onViewInitFinished(isX5: Boolean) {
+                Log.d(TAG, "onViewInitFinished: isX5=$isX5")
+                callback(Result.success(isX5))
             }
 
         })
