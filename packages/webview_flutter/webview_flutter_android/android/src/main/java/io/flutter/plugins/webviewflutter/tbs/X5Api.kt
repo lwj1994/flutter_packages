@@ -44,7 +44,6 @@ class X5Api(private val context: Context) : AndroidX5WebViewApi {
              */
             override fun onViewInitFinished(isX5: Boolean) {
                 Log.d(TAG, "onViewInitFinished: isX5=$isX5")
-                callback(Result.success(isX5))
             }
         })
         val map = mutableMapOf<String, Any>()
@@ -66,18 +65,6 @@ class X5Api(private val context: Context) : AndroidX5WebViewApi {
             }
 
         })
-        QbSdk.preInit(context, object : QbSdk.PreInitCallback {
-            override fun onCoreInitFinished() {
-
-            }
-
-            override fun onViewInitFinished(isX5: Boolean) {
-                Log.d(TAG, "onViewInitFinished: isX5=$isX5")
-
-            }
-
-        })
-
         callback(Result.success(QbSdk.canLoadX5(context)))
         QbSdk.setDownloadWithoutWifi(true)
     }
